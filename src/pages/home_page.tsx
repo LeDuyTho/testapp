@@ -13,7 +13,7 @@ import {HomePageProps} from '../app_navigators/stack_params';
 import {clearPayload} from '../app_stores/authSlice';
 
 const HomePage: FC<HomePageProps> = props => {
-  const { token, payload } = useSelector((state: any) => state.auth);
+  const {token, payload} = useSelector((state: any) => state.auth);
   const dispatch = useDispatch();
 
   const data = [
@@ -56,11 +56,27 @@ const HomePage: FC<HomePageProps> = props => {
       </View>
 
       <View style={styles.itemView}>
-        <Text style={styles.text}>Item 2</Text>
+        <TouchableOpacity
+          onPress={() =>
+            props.navigation.navigate('DetailPage', {
+              notificationId: '',
+              item: data[1],
+            })
+          }>
+          <Text style={styles.text}>Item 2</Text>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.itemView}>
-        <Text style={styles.text}>Item 3</Text>
+        <TouchableOpacity
+          onPress={() =>
+            props.navigation.navigate('DetailPage', {
+              notificationId: '',
+              item: data[2],
+            })
+          }>
+          <Text style={styles.text}>Item 3</Text>
+        </TouchableOpacity>
       </View>
 
       {/* <Button

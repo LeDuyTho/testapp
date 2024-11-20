@@ -1,7 +1,6 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import colors from '../commons/colors';
-import {windowWidth} from '../commons/dimens';
 import {DetailPageProps} from '../app_navigators/stack_params';
 import {useSelector} from 'react-redux';
 

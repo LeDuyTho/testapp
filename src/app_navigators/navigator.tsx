@@ -9,7 +9,7 @@ import {useDispatch} from 'react-redux';
 import {AppProps} from '../models/app_model';
 import {setToken, setPayload} from '../app_stores/authSlice';
 import DetailPage from '../pages/detail_page';
-import AnotherPage from '../pages/AnotherPage';
+import AnotherPage from '../pages/another_page';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
