@@ -13,8 +13,7 @@ import {HomePageProps} from '../app_navigators/stack_params';
 import {clearPayload} from '../app_stores/authSlice';
 
 const HomePage: FC<HomePageProps> = props => {
-  const token = useSelector((state: any) => state.auth.token); // Lấy token
-  const payload = useSelector((state: any) => state.auth.payload); // Lấy payload
+  const { token, payload } = useSelector((state: any) => state.auth);
   const dispatch = useDispatch();
 
   const data = [

@@ -7,7 +7,8 @@ import {useSelector} from 'react-redux';
 
 const DetailPage: FC<DetailPageProps> = props => {
   const item = props.route.params.item;
-  const payload = useSelector((state: any) => state.auth.payload); // Lấy payload
+
+  const {payload} = useSelector((state: any) => state.auth);
   console.log('CHECK PAYLOAD REMOVE =', payload);
 
   return (

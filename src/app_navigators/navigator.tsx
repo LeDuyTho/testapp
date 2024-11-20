@@ -5,7 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {View, StyleSheet} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import HomePage from '../pages/home_page';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {AppProps} from '../models/app_model';
 import {setToken, setPayload} from '../app_stores/authSlice';
 import DetailPage from '../pages/detail_page';
